@@ -65,7 +65,7 @@ clean   Remove generated build files.
 help    Show these targets.
 ```
 
-For native builds, Lean versions are recorded in `lean/lean-toolchain` and
+For native builds, the shared Lean version is recorded in `lean/lean-toolchain` and
 `bend/lean-toolchain`; the Bend compiler and Bun versions are in
 `bend/TOOLCHAIN.toml`. Rocq uses `coqc` and `coqchk`. Python requires version
 3.11 or later. The paper uses `pdflatex` and `bibtex` from TeX Live.

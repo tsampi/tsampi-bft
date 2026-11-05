@@ -16,10 +16,10 @@ COPY bend/lean-toolchain bend/TOOLCHAIN.toml /tmp/bend/
 RUN set -eu; \
     lean_toolchain="$(tr -d '\r\n' < /tmp/lean-toolchain)"; \
     bend_lean_toolchain="$(tr -d '\r\n' < /tmp/bend/lean-toolchain)"; \
+    test "$lean_toolchain" = "$bend_lean_toolchain"; \
     curl -fsSL https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh -o /tmp/elan-init.sh; \
     sh /tmp/elan-init.sh -y --no-modify-path --default-toolchain none; \
     elan toolchain install "$lean_toolchain"; \
-    elan toolchain install "$bend_lean_toolchain"; \
     elan default "$lean_toolchain"; \
     rm /tmp/lean-toolchain /tmp/elan-init.sh /tmp/bend/lean-toolchain
 
