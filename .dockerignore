@@ -1,0 +1,12 @@
+.git
+**/.git
+build/
+lean/.lake/
+**/__pycache__/
+**/*.pyc
+rocq/*.vo
+rocq/*.vok
+rocq/*.vos
+rocq/*.glob
+rocq/.*.aux
+**/.lia.cache

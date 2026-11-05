@@ -1,0 +1,1071 @@
+% Protocol account grounded in the companion executable and formal definitions.
+% Bundled paper template assets and bibliography.
+\begin{filecontents*}{arXiv-template-LICENSE.txt}
+                                 Apache License
+                           Version 2.0, January 2004
+                        http://www.apache.org/licenses/
+
+   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+
+   1. Definitions.
+
+      "License" shall mean the terms and conditions for use, reproduction,
+      and distribution as defined by Sections 1 through 9 of this document.
+
+      "Licensor" shall mean the copyright owner or entity authorized by
+      the copyright owner that is granting the License.
+
+      "Legal Entity" shall mean the union of the acting entity and all
+      other entities that control, are controlled by, or are under common
+      control with that entity. For the purposes of this definition,
+      "control" means (i) the power, direct or indirect, to cause the
+      direction or management of such entity, whether by contract or
+      otherwise, or (ii) ownership of fifty percent (50%) or more of the
+      outstanding shares, or (iii) beneficial ownership of such entity.
+
+      "You" (or "Your") shall mean an individual or Legal Entity
+      exercising permissions granted by this License.
+
+      "Source" form shall mean the preferred form for making modifications,
+      including but not limited to software source code, documentation
+      source, and configuration files.
+
+      "Object" form shall mean any form resulting from mechanical
+      transformation or translation of a Source form, including but
+      not limited to compiled object code, generated documentation,
+      and conversions to other media types.
+
+      "Work" shall mean the work of authorship, whether in Source or
+      Object form, made available under the License, as indicated by a
+      copyright notice that is included in or attached to the work
+      (an example is provided in the Appendix below).
+
+      "Derivative Works" shall mean any work, whether in Source or Object
+      form, that is based on (or derived from) the Work and for which the
+      editorial revisions, annotations, elaborations, or other modifications
+      represent, as a whole, an original work of authorship. For the purposes
+      of this License, Derivative Works shall not include works that remain
+      separable from, or merely link (or bind by name) to the interfaces of,
+      the Work and Derivative Works thereof.
+
+      "Contribution" shall mean any work of authorship, including
+      the original version of the Work and any modifications or additions
+      to that Work or Derivative Works thereof, that is intentionally
+      submitted to Licensor for inclusion in the Work by the copyright owner
+      or by an individual or Legal Entity authorized to submit on behalf of
+      the copyright owner. For the purposes of this definition, "submitted"
+      means any form of electronic, verbal, or written communication sent
+      to the Licensor or its representatives, including but not limited to
+      communication on electronic mailing lists, source code control systems,
+      and issue tracking systems that are managed by, or on behalf of, the
+      Licensor for the purpose of discussing and improving the Work, but
+      excluding communication that is conspicuously marked or otherwise
+      designated in writing by the copyright owner as "Not a Contribution."
+
+      "Contributor" shall mean Licensor and any individual or Legal Entity
+      on behalf of whom a Contribution has been received by Licensor and
+      subsequently incorporated within the Work.
+
+   2. Grant of Copyright License. Subject to the terms and conditions of
+      this License, each Contributor hereby grants to You a perpetual,
+      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+      copyright license to reproduce, prepare Derivative Works of,
+      publicly display, publicly perform, sublicense, and distribute the
+      Work and such Derivative Works in Source or Object form.
+
+   3. Grant of Patent License. Subject to the terms and conditions of
+      this License, each Contributor hereby grants to You a perpetual,
+      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+      (except as stated in this section) patent license to make, have made,
+      use, offer to sell, sell, import, and otherwise transfer the Work,
+      where such license applies only to those patent claims licensable
+      by such Contributor that are necessarily infringed by their
+      Contribution(s) alone or by combination of their Contribution(s)
+      with the Work to which such Contribution(s) was submitted. If You
+      institute patent litigation against any entity (including a
+      cross-claim or counterclaim in a lawsuit) alleging that the Work
+      or a Contribution incorporated within the Work constitutes direct
+      or contributory patent infringement, then any patent licenses
+      granted to You under this License for that Work shall terminate
+      as of the date such litigation is filed.
+
+   4. Redistribution. You may reproduce and distribute copies of the
+      Work or Derivative Works thereof in any medium, with or without
+      modifications, and in Source or Object form, provided that You
+      meet the following conditions:
+
+      (a) You must give any other recipients of the Work or
+          Derivative Works a copy of this License; and
+
+      (b) You must cause any modified files to carry prominent notices
+          stating that You changed the files; and
+
+      (c) You must retain, in the Source form of any Derivative Works
+          that You distribute, all copyright, patent, trademark, and
+          attribution notices from the Source form of the Work,
+          excluding those notices that do not pertain to any part of
+          the Derivative Works; and
+
+      (d) If the Work includes a "NOTICE" text file as part of its
+          distribution, then any Derivative Works that You distribute must
+          include a readable copy of the attribution notices contained
+          within such NOTICE file, excluding those notices that do not
+          pertain to any part of the Derivative Works, in at least one
+          of the following places: within a NOTICE text file distributed
+          as part of the Derivative Works; within the Source form or
+          documentation, if provided along with the Derivative Works; or,
+          within a display generated by the Derivative Works, if and
+          wherever such third-party notices normally appear. The contents
+          of the NOTICE file are for informational purposes only and
+          do not modify the License. You may add Your own attribution
+          notices within Derivative Works that You distribute, alongside
+          or as an addendum to the NOTICE text from the Work, provided
+          that such additional attribution notices cannot be construed
+          as modifying the License.
+
+      You may add Your own copyright statement to Your modifications and
+      may provide additional or different license terms and conditions
+      for use, reproduction, or distribution of Your modifications, or
+      for any such Derivative Works as a whole, provided Your use,
+      reproduction, and distribution of the Work otherwise complies with
+      the conditions stated in this License.
+
+   5. Submission of Contributions. Unless You explicitly state otherwise,
+      any Contribution intentionally submitted for inclusion in the Work
+      by You to the Licensor shall be under the terms and conditions of
+      this License, without any additional terms or conditions.
+      Notwithstanding the above, nothing herein shall supersede or modify
+      the terms of any separate license agreement you may have executed
+      with Licensor regarding such Contributions.
+
+   6. Trademarks. This License does not grant permission to use the trade
+      names, trademarks, service marks, or product names of the Licensor,
+      except as required for reasonable and customary use in describing the
+      origin of the Work and reproducing the content of the NOTICE file.
+
+   7. Disclaimer of Warranty. Unless required by applicable law or
+      agreed to in writing, Licensor provides the Work (and each
+      Contributor provides its Contributions) on an "AS IS" BASIS,
+      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+      implied, including, without limitation, any warranties or conditions
+      of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+      PARTICULAR PURPOSE. You are solely responsible for determining the
+      appropriateness of using or redistributing the Work and assume any
+      risks associated with Your exercise of permissions under this License.
+
+   8. Limitation of Liability. In no event and under no legal theory,
+      whether in tort (including negligence), contract, or otherwise,
+      unless required by applicable law (such as deliberate and grossly
+      negligent acts) or agreed to in writing, shall any Contributor be
+      liable to You for damages, including any direct, indirect, special,
+      incidental, or consequential damages of any character arising as a
+      result of this License or out of the use or inability to use the
+      Work (including but not limited to damages for loss of goodwill,
+      work stoppage, computer failure or malfunction, or any and all
+      other commercial damages or losses), even if such Contributor
+      has been advised of the possibility of such damages.
+
+   9. Accepting Warranty or Additional Liability. While redistributing
+      the Work or Derivative Works thereof, You may choose to offer,
+      and charge a fee for, acceptance of support, warranty, indemnity,
+      or other liability obligations and/or rights consistent with this
+      License. However, in accepting such obligations, You may act only
+      on Your own behalf and on Your sole responsibility, not on behalf
+      of any other Contributor, and only if You agree to indemnify,
+      defend, and hold each Contributor harmless for any liability
+      incurred by, or claims asserted against, such Contributor by reason
+      of your accepting any such warranty or additional liability.
+
+   END OF TERMS AND CONDITIONS
+
+   APPENDIX: How to apply the Apache License to your work.
+
+      To apply the Apache License to your work, attach the following
+      boilerplate notice, with the fields enclosed by brackets "[]"
+      replaced with your own identifying information. (Don't include
+      the brackets!)  The text should be enclosed in the appropriate
+      comment syntax for the file format. We also recommend that a
+      file or class name and description of purpose be included on the
+      same "printed page" as the copyright notice for easier
+      identification within third-party archives.
+
+   Copyright [yyyy] [name of copyright owner]
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+\end{filecontents*}
+
+\begin{filecontents*}{preprint.sty}
+\NeedsTeXFormat{LaTeX2e}
+
+%% declare nonatbib option, which does not load natbib in case of
+%% package clash (users can pass options to natbib via
+%% \PassOptionsToPackage)
+%\newif\if@natbib\@natbibtrue
+%\DeclareOption{nonatbib}{
+%  \@natbibfalse
+%}
+
+\ProcessOptions\relax
+
+% Use roman fonts for equations if available
+\IfFileExists{txfonts.sty}%
+  {\AtEndOfClass{\RequirePackage{txfonts}%
+  \gdef\ttdefault{cmtt}%
+   \let\iint\relax
+  \let\iiint\relax
+  \let\iiiint\relax
+  \let\idotsint\relax
+  \let\openbox\relax}}{\RequirePackage{times}}
+
+ % other font configurations
+\renewcommand{\rmdefault}{ptm}
+\renewcommand{\sfdefault}{phv}
+
+
+\RequirePackage[verbose=true,letterpaper]{geometry}
+\AtBeginDocument{
+  \newgeometry{
+    textheight=9.3in,
+    textwidth=7.1in,
+    top=0.96in,
+    headheight=0.18in,
+    headsep=0.14in,
+    footskip=0.1in
+  }
+}
+
+\usepackage{tikz}
+\usepackage{eso-pic}
+
+\AddToHook{shipout/background}{%
+  \begin{tikzpicture}[remember picture, overlay]
+    \node at ([xshift=-3.55in,yshift=5.2in]current page.center) {\rule{.4pt}{.4in}};
+    \node at ([xshift=3.55in,yshift=5.2in]current page.center) {\rule{.4pt}{.4in}};
+    \node at ([xshift=-3.95in,yshift=4.8in]current page.center) {\rule{.4in}{.4pt}};
+    \node at ([xshift=3.95in,yshift=4.8in]current page.center) {\rule{.4in}{.4pt}};
+    \node at ([xshift=-3.55in,yshift=-5.2in]current page.center) {\rule{.4pt}{.4in}};
+    \node at ([xshift=3.55in,yshift=-5.2in]current page.center) {\rule{.4pt}{.4in}};
+    \node at ([xshift=-3.95in,yshift=-4.8in]current page.center) {\rule{.4in}{.4pt}};
+    \node at ([xshift=3.95in,yshift=-4.8in]current page.center) {\rule{.4in}{.4pt}};
+  \end{tikzpicture}%
+}
+
+
+\widowpenalty=10000
+\clubpenalty=10000
+\flushbottom
+\sloppy
+
+% easy adding of ORCiDs
+\usepackage{scalerel}
+\usepackage{tikz}
+\usetikzlibrary{svg.path}
+\definecolor{orcidlogocol}{HTML}{A6CE39}
+\tikzset{
+  orcidlogo/.pic={
+    \fill[orcidlogocol] svg{M256,128c0,70.7-57.3,128-128,128C57.3,256,0,198.7,0,128C0,57.3,57.3,0,128,0C198.7,0,256,57.3,256,128z};
+    \fill[white] svg{M86.3,186.2H70.9V79.1h15.4v48.4V186.2z}
+                 svg{M108.9,79.1h41.6c39.6,0,57,28.3,57,53.6c0,27.5-21.5,53.6-56.8,53.6h-41.8V79.1z M124.3,172.4h24.5c34.9,0,42.9-26.5,42.9-39.7c0-21.5-13.7-39.7-43.7-39.7h-23.7V172.4z}
+                 svg{M88.7,56.8c0,5.5-4.5,10.1-10.1,10.1c-5.6,0-10.1-4.6-10.1-10.1c0-5.6,4.5-10.1,10.1-10.1C84.2,46.7,88.7,51.3,88.7,56.8z};
+  }
+}
+
+\newcommand\orcid[1]{\href{https://orcid.org/#1}{\mbox{\scalerel*{
+\begin{tikzpicture}[yscale=-1,transform shape]
+\pic{orcidlogo};
+\end{tikzpicture}
+}{|}}} \href{https://orcid.org/#1}{#1}}
+
+% Header options
+\RequirePackage{fancyhdr}
+\fancyhf{}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\fancyheadoffset{0pt}
+\lhead{\scshape Preprint -- \@title}
+\rhead{\thepage}
+%\rfoot{\thepage}
+
+%Handling Keywords
+\def\keywordname{{\bfseries \emph Keywords}}%
+\def\keywords#1{\par\addvspace\medskipamount{\rightskip=0pt plus1cm
+\def\and{\ifhmode\unskip\nobreak\fi\ $\cdot$
+}\noindent\keywordname\enspace\ignorespaces#1\par}}
+
+% font sizes with reduced leading
+\renewcommand{\normalsize}{%
+  \@setfontsize\normalsize\@xpt\@xipt
+  \abovedisplayskip      7\p@ \@plus 2\p@ \@minus 5\p@
+  \abovedisplayshortskip \z@ \@plus 3\p@
+  \belowdisplayskip      \abovedisplayskip
+  \belowdisplayshortskip 4\p@ \@plus 3\p@ \@minus 3\p@
+}
+\normalsize
+\renewcommand{\small}{%
+  \@setfontsize\small\@ixpt\@xpt
+  \abovedisplayskip      6\p@ \@plus 1.5\p@ \@minus 4\p@
+  \abovedisplayshortskip \z@  \@plus 2\p@
+  \belowdisplayskip      \abovedisplayskip
+  \belowdisplayshortskip 3\p@ \@plus 2\p@   \@minus 2\p@
+}
+\renewcommand{\footnotesize}{\@setfontsize\footnotesize\@ixpt\@xpt}
+\renewcommand{\scriptsize}{\@setfontsize\scriptsize\@viipt\@viiipt}
+\renewcommand{\tiny}{\@setfontsize\tiny\@vipt\@viipt}
+\renewcommand{\large}{\@setfontsize\large\@xiipt{14}}
+\renewcommand{\Large}{\@setfontsize\Large\@xivpt{16}}
+\renewcommand{\LARGE}{\@setfontsize\LARGE\@xviipt{20}}
+\renewcommand{\huge}{\@setfontsize\huge\@xxpt{23}}
+\renewcommand{\Huge}{\@setfontsize\Huge\@xxvpt{28}}
+
+% sections with less space
+\providecommand{\section}{}
+\renewcommand{\section}{%
+  \@startsection{section}{1}{\z@}%
+                {-2.0ex \@plus -0.5ex \@minus -0.2ex}%
+                { 1.5ex \@plus  0.3ex \@minus  0.2ex}%
+                {\large\scshape\raggedright}%
+}
+\providecommand{\subsection}{}
+\renewcommand{\subsection}{%
+  \@startsection{subsection}{2}{\z@}%
+                {-1.8ex \@plus -0.5ex \@minus -0.2ex}%
+                { 0.8ex \@plus  0.2ex}%
+                {\normalsize\itshape\raggedright}%
+}
+\providecommand{\subsubsection}{}
+\renewcommand{\subsubsection}{%
+  \@startsection{subsubsection}{3}{\z@}%
+                {-1.5ex \@plus -0.5ex \@minus -0.2ex}%
+                { 0.5ex \@plus  0.2ex}%
+                {\normalsize\itshape\raggedright}%
+}
+\providecommand{\paragraph}{}
+\renewcommand{\paragraph}{%
+  \@startsection{paragraph}{4}{\z@}%
+                {1.5ex \@plus 0.5ex \@minus 0.2ex}%
+                {-1em}%
+                {\normalsize\bf}%
+}
+\providecommand{\subparagraph}{}
+\renewcommand{\subparagraph}{%
+  \@startsection{subparagraph}{5}{\z@}%
+                {1.5ex \@plus 0.5ex \@minus 0.2ex}%
+                {-1em}%
+                {\normalsize\bf}%
+}
+\providecommand{\subsubsubsection}{}
+\renewcommand{\subsubsubsection}{%
+  \vskip5pt{\noindent\normalsize\rm\raggedright}%
+}
+
+% float placement
+\renewcommand{\topfraction      }{0.85}
+\renewcommand{\bottomfraction   }{0.4}
+\renewcommand{\textfraction     }{0.1}
+\renewcommand{\floatpagefraction}{0.7}
+
+\newlength{\@abovecaptionskip}\setlength{\@abovecaptionskip}{7\p@}
+\newlength{\@belowcaptionskip}\setlength{\@belowcaptionskip}{\z@}
+
+\setlength{\abovecaptionskip}{\@abovecaptionskip}
+\setlength{\belowcaptionskip}{\@belowcaptionskip}
+
+% swap above/belowcaptionskip lengths for tables
+\renewenvironment{table}
+  {\setlength{\abovecaptionskip}{\@belowcaptionskip}%
+   \setlength{\belowcaptionskip}{\@abovecaptionskip}%
+   \@float{table}}
+  {\end@float}
+
+% footnote formatting
+\setlength{\footnotesep }{6.65\p@}
+\setlength{\skip\footins}{9\p@ \@plus 4\p@ \@minus 2\p@}
+\renewcommand{\footnoterule}{\kern-3\p@ \hrule width 12pc \kern 2.6\p@}
+\setcounter{footnote}{0}
+
+% paragraph formatting
+\setlength{\parindent}{2em}
+\setlength{\parskip  }{5.5\p@}
+
+% list formatting
+\setlength{\topsep       }{4\p@ \@plus 1\p@   \@minus 2\p@}
+\setlength{\partopsep    }{1\p@ \@plus 0.5\p@ \@minus 0.5\p@}
+\setlength{\itemsep      }{2\p@ \@plus 1\p@   \@minus 0.5\p@}
+\setlength{\parsep       }{2\p@ \@plus 1\p@   \@minus 0.5\p@}
+\setlength{\leftmargin   }{3pc}
+\setlength{\leftmargini  }{\leftmargin}
+\setlength{\leftmarginii }{2em}
+\setlength{\leftmarginiii}{1.5em}
+\setlength{\leftmarginiv }{1.0em}
+\setlength{\leftmarginv  }{0.5em}
+\def\@listi  {\leftmargin\leftmargini}
+\def\@listii {\leftmargin\leftmarginii
+              \labelwidth\leftmarginii
+              \advance\labelwidth-\labelsep
+              \topsep  2\p@ \@plus 1\p@    \@minus 0.5\p@
+              \parsep  1\p@ \@plus 0.5\p@ \@minus 0.5\p@
+              \itemsep \parsep}
+\def\@listiii{\leftmargin\leftmarginiii
+              \labelwidth\leftmarginiii
+              \advance\labelwidth-\labelsep
+              \topsep    1\p@ \@plus 0.5\p@ \@minus 0.5\p@
+              \parsep    \z@
+              \partopsep 0.5\p@ \@plus 0\p@ \@minus 0.5\p@
+              \itemsep \topsep}
+\def\@listiv {\leftmargin\leftmarginiv
+              \labelwidth\leftmarginiv
+              \advance\labelwidth-\labelsep}
+\def\@listv  {\leftmargin\leftmarginv
+              \labelwidth\leftmarginv
+              \advance\labelwidth-\labelsep}
+\def\@listvi {\leftmargin\leftmarginvi
+              \labelwidth\leftmarginvi
+              \advance\labelwidth-\labelsep}
+
+% create title
+\providecommand{\maketitle}{}
+\renewcommand{\maketitle}{%
+  \par
+  \begingroup
+    \renewcommand{\thefootnote}{\fnsymbol{footnote}}
+    % for perfect author name centering
+    \renewcommand{\@makefnmark}{\hbox to \z@{$^{\@thefnmark}$\hss}}
+    % The footnote-mark was overlapping the footnote-text,
+    % added the following to fix this problem               (MK)
+    \long\def\@makefntext##1{%
+      \parindent 1em\noindent
+      \hbox to 1.8em{\hss $\m@th ^{\@thefnmark}$}##1
+    }
+    \thispagestyle{empty}
+    \vspace*{-0.5cm}
+    \@maketitle
+    \@thanks
+    %\@notice
+  \endgroup
+  \let\maketitle\relax
+  \let\thanks\relax
+}
+
+% create title (includes both anonymized and non-anonymized versions)
+\providecommand{\@maketitle}{}
+\renewcommand{\@maketitle}{%
+  \vbox{%
+    \hsize\textwidth
+    \linewidth\hsize
+    \centering
+    {\LARGE\sc \@title\par}
+    \vskip 0.1in
+    \textsc{Preprint, compiled \today}\\
+    \def\And{%
+      \end{tabular}\hfil\linebreak[0]\hfil%
+      \begin{tabular}[t]{c}\bf\rule{\z@}{24\p@}\ignorespaces%
+    }
+    \def\AND{%
+      \end{tabular}\hfil\linebreak[4]\hfil%
+      \begin{tabular}[t]{c}\bf\rule{\z@}{24\p@}\ignorespaces%
+    }
+    \begin{tabular}[t]{c}\bf\rule{\z@}{24\p@}\@author\end{tabular}%
+  \vskip 0.2in
+  }
+}
+
+% abstract styling
+\renewenvironment{abstract}
+{
+  \centerline
+  {\large \bfseries \scshape Abstract}
+  \begin{quote}
+}
+{
+  \end{quote}
+}
+
+\endinput
+\end{filecontents*}
+
+\begin{filecontents*}{references.bib}
+@techreport{rw-vrf,
+  author = {Sharon Goldberg and Leonid Reyzin and Dimitrios Papadopoulos and Jan V{\v c}el{\'a}k},
+  title = {Verifiable Random Functions ({VRFs})},
+  institution = {Internet Research Task Force},
+  type = {RFC},
+  number = {9381},
+  year = {2023},
+  month = aug,
+  url = {https://www.rfc-editor.org/rfc/rfc9381.html}
+}
+
+@article{rw-dls,
+  author = {Cynthia Dwork and Nancy Lynch and Larry Stockmeyer},
+  title = {Consensus in the Presence of Partial Synchrony},
+  journal = {Journal of the ACM},
+  volume = {35},
+  number = {2},
+  year = {1988},
+  pages = {288--323},
+  url = {https://groups.csail.mit.edu/tds/papers/Lynch/jacm88.pdf}
+}
+
+@inproceedings{rw-pbft,
+  author = {Miguel Castro and Barbara Liskov},
+  title = {Practical Byzantine Fault Tolerance},
+  booktitle = {Proceedings of the 3rd Symposium on Operating Systems Design and Implementation},
+  year = {1999},
+  pages = {173--186},
+  publisher = {USENIX Association},
+  doi = {10.5555/296806.296824}
+}
+
+@article{rw-tendermint,
+  author = {Ethan Buchman and Jae Kwon and Zarko Milosevic},
+  title = {The Latest Gossip on {BFT} Consensus},
+  journal = {arXiv preprint arXiv:1807.04938},
+  year = {2019},
+  doi = {10.48550/arXiv.1807.04938}
+}
+
+@inproceedings{rw-hotstuff,
+  author = {Maofan Yin and Dahlia Malkhi and Michael K. Reiter and Guy Golan Gueta and Ittai Abraham},
+  title = {{HotStuff}: {BFT} Consensus in the Lens of Blockchain},
+  booktitle = {Proceedings of the 2019 ACM Symposium on Principles of Distributed Computing},
+  year = {2019},
+  pages = {347--356},
+  doi = {10.1145/3293611.3331591},
+  url = {https://arxiv.org/pdf/1803.05069v6}
+}
+
+@techreport{rw-diembft,
+  author = {{The Diem Team}},
+  title = {{DiemBFT} v4: State Machine Replication in the {Diem} Blockchain},
+  institution = {Diem Association},
+  year = {2021},
+  month = aug,
+  note = {Revised August 18, 2021},
+  url = {https://developers.diem.com/papers/diem-consensus-state-machine-replication-in-the-diem-blockchain/2021-08-17.pdf}
+}
+
+@article{rw-monadbft,
+  author = {Mohammad Mussadiq Jalalzai and Kushal Babel and Jovan Komatovic and Tobias Klenze and Sourav Das and Fatima Elsheimy and Mike Setrin and John Bergschneider and Babak Gilkalaye},
+  title = {{MonadBFT}: Fast, Responsive, Fork-Resistant Streamlined Consensus},
+  journal = {arXiv preprint arXiv:2502.20692},
+  year = {2026},
+  doi = {10.48550/arXiv.2502.20692}
+}
+
+@article{rw-casper,
+  author = {Vitalik Buterin and Virgil Griffith},
+  title = {Casper the Friendly Finality Gadget},
+  journal = {arXiv preprint arXiv:1710.09437},
+  year = {2019},
+  doi = {10.48550/arXiv.1710.09437}
+}
+
+@article{rw-gasper,
+  author = {Vitalik Buterin and Diego Hernandez and Thor Kamphefner and Khiem Pham and Zhi Qiao and Danny Ryan and Juhyeok Sin and Ying Wang and Yan X Zhang},
+  title = {Combining {GHOST} and Casper},
+  journal = {arXiv preprint arXiv:2003.03052},
+  year = {2020},
+  doi = {10.48550/arXiv.2003.03052}
+}
+
+@article{rw-grandpa,
+  author = {Alistair Stewart and Eleftherios Kokoris-Kogias},
+  title = {{GRANDPA}: A Byzantine Finality Gadget},
+  journal = {arXiv preprint arXiv:2007.01560},
+  year = {2020},
+  doi = {10.48550/arXiv.2007.01560}
+}
+
+@inproceedings{rw-backbone,
+  author = {Juan A. Garay and Aggelos Kiayias and Nikos Leonardos},
+  title = {The Bitcoin Backbone Protocol: Analysis and Applications},
+  booktitle = {Advances in Cryptology -- EUROCRYPT 2015},
+  year = {2015},
+  pages = {281--310},
+  publisher = {Springer},
+  doi = {10.1007/978-3-662-46803-6_10}
+}
+
+@inproceedings{rw-narwhal-tusk,
+  author = {George Danezis and Lefteris Kokoris-Kogias and Alberto Sonnino and Alexander Spiegelman},
+  title = {Narwhal and Tusk: A {DAG}-based Mempool and Efficient {BFT} Consensus},
+  booktitle = {Proceedings of the Seventeenth European Conference on Computer Systems},
+  year = {2022},
+  pages = {1--17},
+  doi = {10.1145/3492321.3519594}
+}
+
+@article{rw-aleph,
+  author = {Adam Gągol and Damian Leśniak and Damian Straszak and Michał Świętek},
+  title = {Aleph: Efficient Atomic Broadcast in Asynchronous Networks with Byzantine Nodes},
+  journal = {arXiv preprint arXiv:1908.05156},
+  year = {2019},
+  doi = {10.48550/arXiv.1908.05156}
+}
+
+@article{rw-hotstuff2,
+  author = {Dahlia Malkhi and Kartik Nayak},
+  title = {{HotStuff-2}: Optimal Two-Phase Responsive {BFT}},
+  journal = {Cryptology ePrint Archive, Paper 2023/397},
+  year = {2023},
+  url = {https://eprint.iacr.org/2023/397}
+}
+
+@inproceedings{rw-sbft,
+  author = {Guy Golan Gueta and Ittai Abraham and Shelly Grossman and Dahlia Malkhi and Benny Pinkas and Michael K. Reiter and Dragos-Adrian Seredinschi and Orr Tamir and Alin Tomescu},
+  title = {{SBFT}: A Scalable and Decentralized Trust Infrastructure},
+  booktitle = {2019 49th Annual IEEE/IFIP International Conference on Dependable Systems and Networks},
+  year = {2019},
+  pages = {568--580},
+  doi = {10.1109/DSN.2019.00063}
+}
+
+@inproceedings{rw-simplex,
+  author = {Benjamin Y. Chan and Rafael Pass},
+  title = {Simplex Consensus: A Simple and Fast Consensus Protocol},
+  booktitle = {Theory of Cryptography},
+  year = {2023},
+  pages = {452--479},
+  doi = {10.1007/978-3-031-48624-1_17}
+}
+
+@misc{rw-alpenglow,
+  author = {Quentin Kniep and Jakub Sliwinski and Roger Wattenhofer},
+  title = {Solana Alpenglow Consensus: Increased Bandwidth, Reduced Latency},
+  year = {2025},
+  howpublished = {White Paper v1.1, Anza},
+  url = {https://github.com/rogerANZA/Alpenglow-White-Paper/blob/f29dbbc51af8d83176f1fc06836ba6aa193d731a/Alpenglow-v1.1.pdf}
+}
+
+@inproceedings{rw-algorand,
+  author = {Yossi Gilad and Rotem Hemo and Silvio Micali and Georgios Vlachos and Nickolai Zeldovich},
+  title = {Algorand: Scaling {Byzantine} Agreements for Cryptocurrencies},
+  booktitle = {Proceedings of the 26th ACM Symposium on Operating Systems Principles},
+  year = {2017},
+  pages = {51--68},
+  doi = {10.1145/3132747.3132757}
+}
+
+@article{rw-minimmit,
+  author = {Brendan Kobayashi Chou and Andrew Lewis-Pye and Patrick O'Grady},
+  title = {Minimmit: Fast Finality with Even Faster Blocks},
+  journal = {arXiv preprint arXiv:2508.10862},
+  year = {2026},
+  doi = {10.48550/arXiv.2508.10862}
+}
+
+@article{rw-chonkybft,
+  author = {Bruno Fran{\c{c}}a and Denis Kolegov and Igor Konnov and Grzegorz Prusak},
+  title = {{ChonkyBFT}: Consensus Protocol of {ZKsync}},
+  journal = {arXiv preprint arXiv:2503.15380},
+  year = {2025},
+  doi = {10.48550/arXiv.2503.15380}
+}
+
+@article{rw-bullshark,
+  author = {Alexander Spiegelman and Neil Giridharan and Alberto Sonnino and Lefteris Kokoris-Kogias},
+  title = {Bullshark: {DAG} {BFT} Protocols Made Practical},
+  journal = {Proceedings of the 2022 ACM SIGSAC Conference on Computer and Communications Security},
+  year = {2022},
+  pages = {2705--2718},
+  doi = {10.1145/3548606.3559361}
+}
+
+@inproceedings{rw-jolteon,
+  author = {Rati Gelashvili and Lefteris Kokoris-Kogias and Alberto Sonnino and Alexander Spiegelman and Zhuolun Xiang},
+  title = {Jolteon and Ditto: Network-Adaptive Efficient Consensus with Asynchronous Fallback},
+  booktitle = {Financial Cryptography and Data Security},
+  year = {2022},
+  pages = {296--315},
+  doi = {10.1007/978-3-031-18283-9_14}
+}
+
+@article{rw-fast-hotstuff,
+  author = {Mohammad M. Jalalzai and Jianyu Niu and Chen Feng and Fangyu Gai},
+  title = {Fast-HotStuff: A Fast and Robust {BFT} Protocol for Blockchains},
+  journal = {IEEE Transactions on Dependable and Secure Computing},
+  year = {2023},
+  doi = {10.1109/TDSC.2023.3308848}
+}
+
+@inproceedings{rw-mysticeti,
+  author = {Kushal Babel and Andrey Chursin and George Danezis and Anastasios Kichidis and Lefteris Kokoris-Kogias and Arun Koshy and Alberto Sonnino and Mingwei Tian},
+  title = {Mysticeti: Reaching the Latency Limits with Uncertified {DAGs}},
+  booktitle = {Network and Distributed System Security Symposium},
+  year = {2025},
+  doi = {10.14722/ndss.2025.240929}
+}
+\end{filecontents*}
+
+\documentclass[twocolumn]{article}
+\usepackage{preprint}
+\RemoveFromHook{shipout/background}[preprint]
+\raggedbottom
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{courier}
+\usepackage{amsmath,amssymb}
+\usepackage{microtype}
+\usepackage[numbers,square]{natbib}
+\bibliographystyle{unsrtnat}
+\usepackage{hyperref}
+\hypersetup{
+  pdftitle={Tsampi BFT: leaderless voting with quorum-ancestry finality},
+  pdfauthor={Tim Watts},
+  pdfsubject={Byzantine fault-tolerant consensus},
+  pdfkeywords={Byzantine fault tolerance, leaderless consensus, linked voting, quorum ancestry},
+  hidelinks}
+\setlength{\emergencystretch}{3em}
+\setcounter{secnumdepth}{3}
+\newcommand{\qid}[1]{\operatorname{Q}_{#1}}
+\newcommand{\height}{\operatorname{height}}
+
+\title{Tsampi BFT: leaderless voting with quorum-ancestry finality}
+\author{Tim Watts\\\href{mailto:tim@readevalprint.com}{tim@readevalprint.com}}
+\date{Published August 17, 2026\\Updated November 1, 2026}
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd{\@maketitle}{\textsc{Preprint, compiled \today}}{\@date}{}%
+  {\PackageError{tsampi-bft}{Could not replace template date}{Check preprint.sty title formatting.}}
+% Keep the template's spacing while using sentence case and bold headings.
+\patchcmd{\@maketitle}{\LARGE\sc}{\LARGE\bfseries}{}%
+  {\PackageError{tsampi-bft}{Could not replace title small caps}{Check preprint.sty title formatting.}}
+\patchcmd{\section}{\scshape}{\normalfont\bfseries}{}%
+  {\PackageError{tsampi-bft}{Could not replace section small caps}{Check preprint.sty section formatting.}}
+\patchcmd{\subsection}{\itshape}{\normalfont\bfseries}{}%
+  {\PackageError{tsampi-bft}{Could not replace subsection styling}{Check preprint.sty subsection formatting.}}
+\patchcmd{\subsubsection}{\itshape}{\normalfont\bfseries}{}%
+  {\PackageError{tsampi-bft}{Could not replace subsubsection styling}{Check preprint.sty subsubsection formatting.}}
+\patchcmd{\abstract}{\scshape}{}{}%
+  {\PackageError{tsampi-bft}{Could not replace abstract small caps}{Check preprint.sty abstract formatting.}}
+\lhead{Preprint -- \@title}
+\makeatother
+
+\begin{document}
+\twocolumn[
+  \begin{@twocolumnfalse}
+    \maketitle
+    \thispagestyle{empty}
+    \begin{abstract}
+% Fixed opening sentence: preserve this wording exactly in future edits.
+Tsampi BFT is a leaderless, asynchronous Byzantine fault tolerant state replication protocol.
+A Vote endorses one Block and uses PrevVote and PrevSelfVote to record ancestry and signed order.
+Blocks contain Votes endorsing their parent Block, and different children can contain the same Votes.
+Ancestry, scores and historical quorum queries determine permitted Votes and finalization.
+Under fixed authority and a quorum for each parent, three later Blocks finalize a selected Block; a fourth finalizes its child.
+The paper states the assumptions for Safety and conditional progress and compares related research.
+\end{abstract}
+    \vspace{0.35cm}
+  \end{@twocolumnfalse}
+]
+
+\section{Introduction}\label{sec:overview}
+
+Tsampi BFT is a leaderless, asynchronous Byzantine fault tolerant state replication protocol.
+Safety requires compatible finalized lineages across honest nodes and time.
+Liveness requires every honest node to eventually finalize a Block above any specified common reference height.
+Validators sign Votes, and proposed Blocks contain Votes endorsing their parent Block.
+PrevVote follows Block ancestry, while PrevSelfVote records one Validator's signed order within active linked history.
+Nodes use ancestry, scores and quorum queries to select Blocks and advance their finalized Blocks.
+
+\section{Votes, Blocks and Validators}\label{sec:objects}
+
+\subsection{Validators and stake}
+
+An authority specifies the Validators, their stake, the chain identity and the endorsement threshold for admitting a child Block.
+A Validator has positive stake under that authority.
+A node retains and checks Blocks and Votes; it may sign for a Validator or observe without signing.
+For authority $s$ with Validator set $V_s$, let $w_s(i)$ denote Validator $i$'s stake and $W_s$ its total stake.
+\[
+W_s=\sum_{i\in V_s}w_s(i).
+\]
+Each check uses the authority recorded by the relevant Block, preserving historical weights after later exclusions.
+
+\subsection{Blocks and parent Votes}\label{sec:proposals}
+
+A non-genesis Block identifies one exact parent Block and contains Votes endorsing that parent under its historical authority.
+Each signing Validator occurs once, and the Block references the proposing Validator's parent Vote as its proposer Vote.
+The proposing Validator signs a separate detached Vote endorsing the completed child Block.
+Requiring this Vote first makes each proposer begin with its own Block and restricts later endorsements to permitted improvements.
+Different children can contain the same parent Votes, including children proposed by one Validator.
+The genesis Block has height zero, empty parent, proposer Vote and inherited Q3 references, and empty Vote and evidence collections.
+
+For $N$ Validators following the improvement rules, consider one child Block each, with a common parent and equal Q1 and Q2.
+If initial endorsements were unrestricted, each Validator could endorse all $N$ children from least to most preferred, giving $N^2$ Votes.
+Requiring the detached Vote first makes each proposer start with its own child and endorse only better children afterward.
+From most to least preferred child, proposers can sign at most $1,2,\ldots,N$ Votes respectively, bounding the total $V$, including detached Votes.
+\[
+V\leq\sum_{r=1}^{N}r=\frac{N(N+1)}{2}.
+\]
+Additional Votes after the detached Votes total at most $N(N-1)/2$.
+The leading term falls from $N^2$ to $N^2/2$, reducing signing and verification work for these competing children.
+
+A child Block uses its parent's endorsement threshold $n/d$, with $0<n\leq d$, to determine the required stake.
+The default $n/d=2/3$ requires strictly more than two thirds of the parent's stake; $n=d$ requires all stake.
+Let $U_B$ be the distinct signing Validators of child $B$'s parent Votes and $A_B$ their total stake under parent $P$'s authority $s_P$.
+\[
+\begin{aligned}
+A_B&=\sum_{i\in U_B}w_{s_P}(i),\\
+&\begin{cases}
+A_Bd>W_{s_P}n,&n<d,\\
+A_B=W_{s_P},&n=d.
+\end{cases}
+\end{aligned}
+\]
+The proposing Validator must have positive stake under that parent authority.
+Verified evidence determines the child's reduced authority as described in Section~\ref{sec:authority}.
+Each child also advances its parent's raw Q1 result or remaining quorum stake under Section~\ref{sec:parent-progress}.
+
+\subsection{Votes and references}
+
+A Vote identifies its signing Validator and one exact endorsed Block, written $T(v)$ for Vote $v$.
+Authentication binds the Vote's contents to that Validator and checks its historical stake.
+Its chain, height and proposing Validator must match the endorsed Block, with Vote height $\height(T(v))+1$.
+The Vote also carries PrevVote, PrevSelfVote, score context and evidence required by its signed references.
+A node admits at most one distinct Vote per Validator and exact endorsed Block on a chain.
+
+\subsubsection{PrevVote}
+
+Tsampi's core logic model is a VoteChain: a chain of Votes linked by PrevVote.
+Each Block references its proposer Vote, which endorses the parent Block.
+PrevVote names the inner identity of that proposer Vote, resolved through the exact endorsed Block.
+The inner identity fixes the signing Validator, chain, height, proposing Validator and PrevVote; the complete Vote additionally identifies its endorsed Block.
+Following PrevVote therefore follows the signed Votes underlying Block ancestry.
+A Vote endorsing genesis has an empty PrevVote reference.
+
+\subsubsection{PrevSelfVote}\label{sec:segments}
+
+During live admission, PrevSelfVote names the preceding signed Vote by the same Validator on the same chain.
+These references give the Validator's active linked history a total causal order across endorsed Blocks.
+Each successor endorses a Block that improves on its predecessor's endorsed Block under Section~\ref{sec:permission}.
+The node also checks improvement against the Blocks established by that Vote's referenced history.
+The linked history remains active while any endorsed Block equals or descends from the new endorsed Block's Q3.
+Retirement permits an empty PrevSelfVote after a complete check, while recorded history retains every signed Vote.
+
+Catch-up establishes Q3 support from authenticated Votes collected across referenced descendant Blocks, counting distinct Validators under an established historical authority.
+With strictly more than two thirds honest stake, each quorum includes honest Validators who already validated those descendants and their active histories.
+Catch-up relies on that prior validation for finalized history under the assumptions in Section~\ref{sec:assumptions}.
+Fresh Votes after catch-up satisfy the active PrevSelfVote and improvement checks.
+
+\section{Block selection and finalization}
+
+\subsection{Ancestry}
+
+A lineage is the exact sequence of parent-linked Blocks from genesis through a specified Block.
+This sequence determines whether finalized lineages are compatible.
+Write $A\preceq B$ when $A$ is an ancestor of or equal to $B$, and $A\prec B$ for strict ancestry.
+Two lineages are compatible when one is a prefix of the other; otherwise they are incomparable.
+
+\subsection{Q1, Q2 and Q3}\label{sec:quorums}
+
+Q1 scans from an admitted Block's parent toward genesis and accumulates distinct signing Validators from carried parent Votes.
+A Vote supports its endorsed Block and that Block's ancestors.
+At each Block $T$, Q1 counts each accumulated Validator once under $T$'s historical authority.
+For authority $s_T$ and counted Validator set $U$, a quorum requires the fixed strict two-thirds inequality below.
+\[
+3\sum_{i\in U}w_{s_T}(i)>2W_{s_T}.
+\]
+Q1 returns the Block with the first completed quorum, unless an inherited limiting Block stops the query earlier.
+An inherited limit or genesis fallback identifies the returned Block without establishing a completed quorum.
+
+Each child must advance its parent's raw Q1 result or increase the remaining distinct stake.\label{sec:parent-progress}
+This ties Block growth to the quorum queries used for finalization.
+The parent Block's Q3 height limits the child's Q1 scan; an empty inherited reference permits scanning to genesis.
+The full query replaces an absent raw result with genesis.
+Equal raw results require increased remaining distinct stake; different nonempty results require the child's result to strictly descend from the parent's.
+A nonempty child result also permits progress when the parent's raw result is absent.
+
+Q2 and Q3 repeat Q1 from the Block returned by the preceding query.
+Each repetition uses that Block's own lineage, historical authority and inherited limit.
+Each repetition starts with zero counted Validators, as expressed by the following definitions.
+\[
+\qid{2}(B)=\qid{1}(\qid{1}(B)),\qquad
+\qid{3}(B)=\qid{1}(\qid{2}(B)).
+\]
+The specified Block's ancestry and historical authority make each query reproducible as the node's state advances.
+
+\subsection{Finalized Blocks}\label{sec:finalization}\label{sec:stored-finality}
+
+A node's finalized Block records the ancestry that later finalization must preserve.
+Compatible Q3 results from admitted Blocks let the node extend that ancestry.
+The node retains equal or deeper compatible Q3 results from admitted lineages extending its existing finalized Block.
+Its Tip is an admitted Block selected for possible finalization and must equal or descend from the finalized Block.
+As finality advances, a compatible Tip may remain; otherwise the node selects the newly finalized Block as Tip.
+The finalized Block can therefore advance beyond the Tip's own historical Q3.
+
+Consider a fixed authority and lineage $G,A,B,C,D,E$, with a quorum of parent Votes carried by every child.
+At $D$, the queries return the following Blocks.
+\[
+\qid{1}(D)=C,\quad \qid{2}(D)=B,\quad \qid{3}(D)=A.
+\]
+Thus a node admitting $D$ can finalize $A$ after three completed Q1 advances.
+A fourth advance gives $\qid{3}(E)=B$ and lets that node finalize the first new child of $A$.
+These advances are asynchronous completion events and can take arbitrary time.
+The example demonstrates progress beyond $A$ under the delivery and fresh generation assumptions of Section~\ref{sec:liveness}.
+
+\subsection{Block comparison}\label{sec:permission}
+
+Tip selection and signing use the same improvement rule for a change of endorsed Block.
+Normal selection chooses an admitted eligible Block equal to or descending from the node's finalized Block.
+Signing also preserves the obligations in the Validator's recorded Votes and the order declared through PrevSelfVote.
+Verified evidence determines the child's authority, and the improvement rule determines permitted Tip changes.
+
+\subsubsection{Scores}\label{sec:ordering}
+
+The proposer score is a fixed input attached to the proposer Vote and reused by every Block referencing that Vote.
+On one lineage, prefer the strict descendant.
+On incomparable lineages, compare proposer Votes at the first different child Blocks and prefer the higher score.
+For equal scores, prefer the smaller Block identity; later descendants preserve this result.
+Write $R(A,B)$ when the comparison prefers Block $A$ to Block $B$.
+
+\subsubsection{Improvement}
+
+Improvement determines whether new Block $N$ may replace old Block $O$ as a Tip or endorsed Block.
+On one lineage, improvement requires $O\prec N$.
+For incomparable Blocks sharing genesis, the permitted alternatives are given below.
+\[
+\begin{aligned}
+\mathrm{Improves}(N,O)\iff{}&
+ \bigl[\qid{2}(O)\prec\qid{2}(N)\bigr]\\
+ &\lor\bigl[R(N,O)\\
+ &\land\bigl(\qid{1}(O)\preceq\qid{1}(N)\\
+ &\hspace{7mm}\lor\qid{2}(O)\preceq\qid{2}(N)\bigr)\bigr]\\
+ &\lor\bigl[\qid{2}(O)\prec\qid{1}(N)\\
+ &\hspace{7mm}\land\neg(\qid{2}(N)\prec\qid{1}(O))\bigr]\\
+ &\lor\bigl[\qid{3}(O)\prec\qid{3}(N)\\
+ &\hspace{5mm}\land\height(\qid{2}(O))\leq\height(\qid{3}(N))\bigr].
+\end{aligned}
+\]
+The first alternative permits strict Q2 advance without a better score.
+The score alternative requires Q1 or Q2 ancestry in addition to $R(N,O)$.
+The negated condition retains equality, reverse ancestry and incomparable lineages as the exact complement of strict ancestry.
+
+The final alternative permits an advancing Q3 that reaches the height of the old Q2 Block.
+Its completed quorum support must satisfy the conditions in Section~\ref{sec:q3-support}.
+Ancestry and score alternatives preserve Q2; this Q3 alternative can preserve finality while Q2 moves to an incomparable lineage.
+The new Vote retains PrevSelfVote while its earlier linked history remains active.
+
+Suppose children $B$ and $X$ share parent $A$, proposer Vote $p$ and a quorum of parent Votes.
+Their scores are equal, and $\qid{1}(B)=\qid{1}(X)=A$.
+If $B$ has the smaller identity, the score and Q1 conditions permit improvement from $X$ to $B$.
+Votes on distinct Blocks sharing PrevVote follow the PrevSelfVote and active linked history checks for permitted signed order.
+
+\section{Safety and Liveness}\label{sec:formal}
+
+\subsection{Evidence and authority}\label{sec:evidence}\label{sec:authority}
+
+Evidence identifies violations by a signing Validator through authenticated Votes and their references.
+Direct evidence includes distinct Votes sharing PrevVote and the same exact endorsed Block, or distinct successors sharing a nonempty PrevSelfVote.
+Other pairs require mutually active endorsed Blocks and neither Vote in the other's valid bounded linked history.
+Derived evidence identifies a Vote violating required evidence or direction rules, using its signed references and verified supporting evidence.
+A fresh Vote includes its required evidence and the available verified evidence.
+Each Validator's stake is excluded once, even when several verified pieces of evidence identify that Validator.
+
+A child Block records verified evidence and excludes the identified Validators from its authority.
+For parent authority $s_P$ and identified Validator set $E_B$, the child's authority is $s_B=s_P\setminus E_B$.
+Admission and parent Vote counting continue to use $s_P$; later children use $s_B$.
+Historical authority remains unchanged, and $s_B$ must contain at least one Validator.
+
+\subsection{Assumptions and Safety}\label{sec:assumptions}
+
+\subsubsection{Finalized history}\label{sec:safety-result}
+
+Safety requires compatible finalized histories across honest nodes, while preservation requires each node's later history to extend its earlier history.
+These conditions make finalized Blocks stable references for later finalization.
+Let $O(s,i)$ be honest node $i$'s finalized lineage at state $s$ of execution $H$.
+Write $L\sqsubseteq R$ when $L$ is a prefix of $R$.
+For all honest nodes $i,j$ and states $s,t$ in $H$, require the following relations.
+\[
+\begin{aligned}
+\mathrm{Safety}:\quad
+&O(s,i)\sqsubseteq O(t,j)\ \lor\ O(t,j)\sqsubseteq O(s,i),\\
+\mathrm{Preservation}:\quad
+&s\leq_H t\ \Longrightarrow O(s,i)\sqsubseteq O(t,i).
+\end{aligned}
+\]
+The theorem establishes compatible finalized Blocks within each reachable state under the following assumptions.
+
+\subsubsection{Quorum overlap}\label{sec:safety-quorums}
+
+The Safety argument uses the honest Validator shared by any two quorums.
+The improvement rule in Section~\ref{sec:permission} preserves Q2 ancestry or requires established Q3 support for catch-up.
+Assume authenticated Votes, a common genesis and an initial authority with distinct Validators holding positive stake.
+Honest Validators hold strictly more than two thirds of the initial stake and check improvement against every earlier Vote they recorded.
+Verified exclusions preserve honest Validators, so quorums under independently reduced historical authorities derived from that initial authority share an honest Validator.
+The theorem requires a quorum for child Block admission; Section~\ref{sec:proposals} defines the protocol's configurable endorsement threshold.
+
+\subsubsection{Q3 support for catch-up}\label{sec:q3-support}
+
+The Q3 catch-up rule in Section~\ref{sec:permission} uses history that honest Validators have already validated.
+For finalized Block $F$, let $C$ be the Block at which its quorum support is established under the applicable historical authority.
+Each contributing recorded Vote $v$ must retain $F$ in its Q2 ancestry and endorse a Block below $C$.
+\[
+F\preceq\qid{2}(T(v)),\qquad
+\height(T(v))<\height(C).
+\]
+For non-genesis Q3 $F$, the node must already have admitted recorded Votes from a quorum, each satisfying both inequalities above.
+Block $C$ must have height at most that of the new endorsed Block.
+The height bounds tie the new Vote to earlier validated Votes, preserving finalized ancestry during catch-up.
+
+\subsection{Conditional progress}\label{sec:liveness}
+
+Conditional progress assumes that every honest node eventually receives the same finite ordered collection of proposed Block lineages.
+Its first lineage is valid and precedes every other listed lineage under the Block comparison.
+Required Blocks and Votes, including references retained by any honest node, must eventually reach every honest node.
+Delivery permits arbitrary finite delays, duplicates and reordered messages.
+This differs from partial synchrony, which adds timing bounds under the conditions studied by Dwork, Lynch and Stockmeyer~\citep{rw-dls}.
+
+Honest Validators must hold strictly more than two thirds of the stake in every applicable parent authority.
+Each honest Validator supplies a valid Vote in each sequence used to finalize the selected Block and a descendant.
+These Votes have increasing recorded order, distinct exact endorsed Blocks per Validator, and permitted changes relative to earlier recorded Votes.
+Each non-genesis Q3 has already admitted support with the height bound in Section~\ref{sec:q3-support}.
+Each contributing Vote satisfies $F\preceq\qid{2}(T(v))$ and $\height(T(v))<\height(C)$ for the Block $F$ being finalized.
+Fresh generation supplies a valid strict descendant with sufficient parent Votes and an authority derived from verified evidence.
+
+Under these assumptions, the result constructs a finite extension of the same execution that finalizes the selected valid Block and a valid strict descendant.
+Both finalized Blocks occur in one resulting state, advancing finalized history beyond the selected Block.
+The extension permits arbitrarily long finite message delays.
+Liveness requires continued finalization above every common reference height, as defined in Section~\ref{sec:overview}.
+
+\section{Related research}\label{sec:related}
+
+\subsection{Finalization}
+
+Chained HotStuff uses a three-chain commit rule under partial synchrony~\citep[Sections 4--5]{rw-hotstuff}.
+Its leader coordinates the Votes that establish successive quorum certificates.
+Tsampi applies Q1 three times, restarting from each returned Block.
+Each query accumulates distinct Validators' stake along that Block's ancestry under the authority recorded there.
+
+\subsection{Permitted Votes}
+
+Tendermint orders proposals through rounds with prevote and precommit steps~\citep[Section III, Algorithm 1]{rw-tendermint}.
+Its locks constrain which proposal a validator may support in a later round.
+Tsampi checks PrevSelfVote and the ancestry of historical quorum results before permitting a later Vote.
+PrevSelfVote identifies the earlier signed choice against which the improvement rule is checked.
+
+Casper FFG defines slashing conditions for Votes between source and target checkpoints~\citep[Section 2]{rw-casper}.
+Its accountable Safety theorem connects conflicting finalized checkpoints to violations by at least one third of the total deposit.
+Tsampi checks conflicts between authenticated Votes and applies verified evidence to a child Block's authority.
+Tsampi uses the parent authority for admission, preserving historical Vote weights while verified evidence determines the child's authority.
+
+\subsection{Delivery}
+
+Narwhal separates transaction dissemination from ordering, and Tusk provides asynchronous consensus over the resulting directed acyclic graph~\citep[Sections 3 and 5]{rw-narwhal-tusk}.
+Narwhal's certificates of availability establish that honest participants retain the referenced transaction data.
+Tsampi describes single-parent Block lineages and assumes eventual delivery of required Blocks and Votes.
+Historical quorum queries require the parent Votes and exact Block ancestry, so delivery includes those references.
+
+\begingroup\raggedright
+\bibliography{references}
+\endgroup
+\end{document}

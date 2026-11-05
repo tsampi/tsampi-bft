@@ -1,0 +1,13 @@
+build/
+lean/.lake/
+python/tmpout/
+rocq/*.aux
+rocq/*.glob
+rocq/*.vo
+rocq/*.vok
+rocq/*.vos
+.lia.cache
+*.log
+
+__pycache__/
+*.py[cod]

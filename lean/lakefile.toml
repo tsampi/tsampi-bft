@@ -1,0 +1,33 @@
+name = "bft-fourth-attempt"
+version = "0.2.0"
+defaultTargets = ["Proofs"]
+
+[[lean_lib]]
+name = "Protocol"
+
+[[lean_lib]]
+name = "Ranking"
+
+[[lean_lib]]
+name = "Quorum"
+
+[[lean_lib]]
+name = "Frontiers"
+
+[[lean_lib]]
+name = "CatchupSafety"
+
+[[lean_lib]]
+name = "ReachableSafety"
+
+[[lean_lib]]
+name = "ProtocolExecution"
+
+[[lean_lib]]
+name = "Liveness"
+
+[[lean_lib]]
+name = "ProtocolLiveness"
+
+[[lean_lib]]
+name = "Proofs"
